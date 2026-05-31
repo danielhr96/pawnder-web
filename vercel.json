@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/support", "destination": "/soporte", "permanent": true },
+    { "source": "/privacidad", "destination": "/privacy", "permanent": true }
+  ]
+}
