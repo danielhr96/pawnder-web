@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soporte — Pawnder</title>
     <meta name="description" content="Soporte y preguntas frecuentes de Pawnder. Encuentra respuestas o contáctanos.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { pawnder: { 50: '#FFF7ED', 100: '#FFEDD5', 500: '#F97316', 600: '#EA580C' } } } } }
@@ -20,13 +21,12 @@
     <!-- Nav -->
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-2">
-                <span class="text-3xl">🐾</span>
-                <span class="text-2xl font-bold text-gray-900">Pawnder</span>
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Pawnder" class="h-12 md:h-14 w-auto">
             </a>
             <div class="flex items-center gap-6 text-sm font-medium">
-                <a href="/soporte.html" class="text-pawnder-600 font-semibold">Soporte</a>
-                <a href="/privacy.html" class="text-gray-600 hover:text-pawnder-600 transition">Privacidad</a>
+                <a href="soporte.html" class="text-pawnder-600 font-semibold">Soporte</a>
+                <a href="privacy.html" class="text-gray-600 hover:text-pawnder-600 transition">Privacidad</a>
             </div>
         </div>
     </nav>
@@ -34,11 +34,11 @@
     <!-- Content -->
     <main class="max-w-3xl mx-auto px-6 py-16">
         <div class="mb-8">
-            <a href="/" class="text-pawnder-600 hover:underline text-sm font-medium">← Inicio</a>
+            <a href="index.html" class="text-pawnder-600 hover:underline text-sm font-medium">← Inicio</a>
         </div>
 
         <div class="text-center mb-16">
-            <div class="text-6xl mb-4">🐾</div>
+            <img src="logo.png" alt="Pawnder" class="h-24 md:h-32 w-auto mx-auto mb-6">
             <h1 class="text-4xl md:text-5xl font-extrabold mb-4">¿Necesitas ayuda?</h1>
             <p class="text-xl text-gray-600">Estamos aquí para ti.</p>
         </div>
@@ -172,14 +172,13 @@
     <footer class="bg-white border-t border-gray-100 py-12 mt-12">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">🐾</span>
-                    <span class="font-bold text-gray-900">Pawnder</span>
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Pawnder" class="h-10 w-auto">
                     <span class="text-gray-400">© 2026</span>
                 </div>
                 <div class="flex gap-6 text-sm text-gray-600">
-                    <a href="/privacy.html" class="hover:text-pawnder-600 transition">Política de Privacidad</a>
-                    <a href="/soporte.html" class="hover:text-pawnder-600 transition">Soporte</a>
+                    <a href="privacy.html" class="hover:text-pawnder-600 transition">Política de Privacidad</a>
+                    <a href="soporte.html" class="hover:text-pawnder-600 transition">Soporte</a>
                     <a href="mailto:daniel@pawnder.pet" class="hover:text-pawnder-600 transition">Contacto</a>
                 </div>
             </div>
