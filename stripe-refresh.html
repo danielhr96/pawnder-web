@@ -30,14 +30,17 @@
             para generar uno nuevo.
         </p>
 
-        <a href="pawnder://stripe-redirect"
-           class="inline-block bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-gray-800 transition mb-6">
-            🐾 Volver a Pawnder
-        </a>
-
-        <p class="text-sm text-gray-400">
-            Si el botón no abre la app, ciérrala y ábrela de nuevo manualmente.
-        </p>
+        <!-- Página mostrada dentro de la app: los deep links pawnder:// no
+             funcionan hacia la misma app, la instrucción es tocar la ✕. -->
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-6">
+            <p class="text-3xl mb-3">↖️</p>
+            <p class="text-lg font-bold">
+                Toca la ✕ en la esquina superior izquierda
+            </p>
+            <p class="text-gray-600 mt-1">
+                y vuelve a tocar "Conectar mi cuenta" para generar un enlace nuevo
+            </p>
+        </div>
     </main>
 
 </body>

@@ -29,14 +29,19 @@
             para ver el estado de tu cuenta — la verificación puede tardar unos minutos.
         </p>
 
-        <a href="pawnder://stripe-redirect"
-           class="inline-block bg-gray-900 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-gray-800 transition mb-6">
-            🐾 Volver a Pawnder
-        </a>
-
-        <p class="text-sm text-gray-400">
-            Si el botón no abre la app, ciérrala y ábrela de nuevo manualmente.
-        </p>
+        <!-- Esta página se muestra DENTRO de la app (SFSafariViewController),
+             donde iOS bloquea los deep links pawnder:// hacia la misma app.
+             Por eso la instrucción es tocar la ✕ — al cerrarse el navegador,
+             la app refresca automáticamente el estado de la cuenta. -->
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-6">
+            <p class="text-3xl mb-3">↖️</p>
+            <p class="text-lg font-bold">
+                Toca la ✕ en la esquina superior izquierda
+            </p>
+            <p class="text-gray-600 mt-1">
+                para volver a Pawnder y ver tu cuenta conectada
+            </p>
+        </div>
     </main>
 
 </body>
