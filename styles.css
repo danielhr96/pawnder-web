@@ -1,0 +1,280 @@
+/* ============================================================
+   Pawnder — Sistema de diseño web
+   Basado en el Manual de Identidad de Marca v1.0 · 2026
+   Paleta 60% crema/blanco · 30% azul · 10% dorado
+   Tipografía: Poppins (Roboto Mono para datos/precios)
+   ============================================================ */
+
+:root{
+  --cobalto:#0A2A6B;   /* principal */
+  --royal:#001E7E;     /* fondo de marca */
+  --cielo:#2E7ABB;     /* acento / botones */
+  --navy:#0D1F3C;      /* títulos / texto */
+  --claro:#7CB8E6;     /* brillos / detalles */
+  --plata:#C7CDD6;     /* premium / metal */
+  --crema:#F3EFDA;     /* fondo cálido */
+  --arena:#F3F0EA;     /* superficies */
+  --dorado:#E8B23A;    /* favoritos / destacados */
+  --texto:#3d4a63;     /* cuerpo sobre claro */
+  --radius:20px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--texto);
+  background:#fff;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--cielo);text-decoration:none}
+a:hover{text-decoration:underline}
+
+h1,h2,h3,h4{color:var(--navy);font-weight:700;letter-spacing:-.5px;line-height:1.15}
+h1{font-size:clamp(34px,5vw,52px)}
+h2{font-size:clamp(28px,4vw,40px)}
+h3{font-size:20px;letter-spacing:0}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px;margin:0 auto;padding:0 24px}
+
+/* Etiquetas / kicker — Poppins SemiBold mayúsculas +tracking */
+.kicker{
+  display:inline-block;font-size:13px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--cielo);margin-bottom:14px;
+}
+.kicker.gold{color:var(--dorado)}
+
+/* Patrón de marca "Paw & Bone" — tono sobre tono, opacidad 8–12% */
+.pattern{
+  background-color:var(--crema);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%230A2A6B' fill-opacity='0.07'%3E%3Cg transform='translate(22,22)'%3E%3Cellipse cx='0' cy='6' rx='7' ry='6'/%3E%3Cellipse cx='-9' cy='-3' rx='3.4' ry='4.4'/%3E%3Cellipse cx='-3' cy='-8' rx='3.4' ry='4.4'/%3E%3Cellipse cx='4' cy='-8' rx='3.4' ry='4.4'/%3E%3Cellipse cx='10' cy='-3' rx='3.4' ry='4.4'/%3E%3C/g%3E%3Cg transform='translate(92,92) rotate(-25)'%3E%3Crect x='-10' y='-3' width='20' height='6' rx='3'/%3E%3Ccircle cx='-10' cy='-3.5' r='3.6'/%3E%3Ccircle cx='-10' cy='3.5' r='3.6'/%3E%3Ccircle cx='10' cy='-3.5' r='3.6'/%3E%3Ccircle cx='10' cy='3.5' r='3.6'/%3E%3C/g%3E%3Cg transform='translate(100,30) rotate(18)'%3E%3Cellipse cx='0' cy='5' rx='5.4' ry='4.6'/%3E%3Cellipse cx='-7' cy='-2.4' rx='2.6' ry='3.4'/%3E%3Cellipse cx='-2.3' cy='-6.2' rx='2.6' ry='3.4'/%3E%3Cellipse cx='3.1' cy='-6.2' rx='2.6' ry='3.4'/%3E%3Cellipse cx='7.7' cy='-2.4' rx='2.6' ry='3.4'/%3E%3C/g%3E%3Cg transform='translate(35,105) rotate(12)'%3E%3Crect x='-8' y='-2.4' width='16' height='4.8' rx='2.4'/%3E%3Ccircle cx='-8' cy='-2.8' r='2.9'/%3E%3Ccircle cx='-8' cy='2.8' r='2.9'/%3E%3Ccircle cx='8' cy='-2.8' r='2.9'/%3E%3Ccircle cx='8' cy='2.8' r='2.9'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid #e9e6da;
+}
+.site-header .bar{
+  max-width:1100px;margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.site-header .logo img{height:52px;width:auto}
+.site-nav{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:500}
+.site-nav a{color:var(--navy)}
+.site-nav a:hover{color:var(--cielo);text-decoration:none}
+@media(max-width:640px){
+  .site-nav a.nav-link{display:none}
+  .site-header .logo img{height:44px}
+}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 26px;border-radius:999px;border:none;cursor:pointer;
+  font-family:inherit;font-size:16px;font-weight:600;text-decoration:none;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-cielo{background:var(--cielo);color:#fff;box-shadow:0 8px 20px rgba(46,122,187,.28)}
+.btn-cielo:hover{background:#2a6fa9;color:#fff}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(13,31,60,.25)}
+.btn-navy:hover{background:#16294d;color:#fff}
+.btn-dorado{background:var(--dorado);color:var(--navy);box-shadow:0 8px 20px rgba(232,178,58,.35)}
+.btn-dorado:hover{background:#d9a42e;color:var(--navy)}
+.btn-outline{
+  background:transparent;color:var(--navy);
+  border:1.5px solid var(--plata);box-shadow:none;
+}
+.btn-outline:hover{border-color:var(--cielo);color:var(--cielo)}
+.btn-sm{padding:10px 20px;font-size:14px}
+
+/* ---------- Hero ---------- */
+.hero{padding:72px 0 84px;overflow:hidden}
+.hero .grid{
+  max-width:1100px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+}
+@media(max-width:860px){.hero .grid{grid-template-columns:1fr;gap:56px}}
+.hero p.sub{font-size:18px;margin:20px 0 30px;max-width:520px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .trust{margin-top:22px;font-size:14px;color:var(--navy);font-weight:500}
+
+/* Mockup de teléfono */
+.phone-wrap{display:flex;justify-content:center;position:relative}
+.phone{
+  width:300px;background:#fff;border-radius:44px;padding:14px;
+  box-shadow:0 30px 80px rgba(10,42,107,.28), 0 4px 16px rgba(10,42,107,.15);
+  border:1px solid #e6e3d8;position:relative;
+}
+.phone .screen{background:var(--arena);border-radius:32px;overflow:hidden}
+.phone .app-bar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;background:#fff;border-bottom:1px solid #eee9dd;
+}
+.phone .app-bar img{height:22px;width:auto}
+.phone .app-bar span{font-size:13px}
+.pet-card{margin:14px;border-radius:20px;overflow:hidden;position:relative;
+  border:2.5px solid var(--dorado);box-shadow:0 10px 26px rgba(13,31,60,.18)}
+.pet-card img{width:100%;height:300px;object-fit:cover}
+.pet-card .grad{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,31,60,0) 45%,rgba(13,31,60,.82) 100%);
+}
+.pet-card .destacado{
+  position:absolute;top:10px;left:10px;background:var(--dorado);color:var(--navy);
+  font-size:11px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:999px;
+}
+.pet-card .info{position:absolute;left:14px;right:14px;bottom:12px;color:#fff}
+.pet-card .info .name{font-weight:700;font-size:19px;letter-spacing:-.3px}
+.pet-card .info .meta{font-size:12.5px;opacity:.92}
+.phone .actions{display:flex;justify-content:center;gap:18px;padding:2px 0 16px}
+.phone .actions .act{
+  width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:21px;background:#fff;box-shadow:0 6px 16px rgba(13,31,60,.14);
+}
+.phone .actions .act.star{background:var(--dorado)}
+.phone .actions .act.paw{background:var(--cielo)}
+.match-chip{
+  position:absolute;top:26px;right:-6px;transform:rotate(6deg);
+  background:#fff;border:1.5px solid var(--claro);color:var(--navy);
+  font-size:13px;font-weight:600;padding:9px 16px;border-radius:999px;
+  box-shadow:0 10px 24px rgba(46,122,187,.25);
+}
+@media(max-width:860px){.match-chip{right:8px}}
+
+/* ---------- Secciones ---------- */
+.section{padding:84px 0}
+.section .head{text-align:center;max-width:640px;margin:0 auto 52px;padding:0 24px}
+.section .head p{margin-top:14px;font-size:17px}
+
+/* Tarjetas de funciones */
+.features{
+  max-width:1100px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+@media(max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.features{grid-template-columns:1fr}}
+.feature{
+  background:var(--arena);border-radius:var(--radius);padding:28px 24px;
+  border:1px solid #e9e5d8;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.feature:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(10,42,107,.10)}
+.feature .ico{
+  width:52px;height:52px;border-radius:16px;background:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:25px;
+  box-shadow:0 4px 12px rgba(10,42,107,.10);margin-bottom:18px;
+}
+.feature h3{margin-bottom:8px}
+.feature p{font-size:14.5px}
+
+/* ---------- Banda Pawnder Plus (Azul Royal) ---------- */
+.plus{
+  background:linear-gradient(150deg,var(--cobalto) 0%,var(--royal) 60%,#02185f 100%);
+  color:#dfe7f5;padding:88px 0;
+}
+.plus .inner{max-width:1100px;margin:0 auto;padding:0 24px;text-align:center}
+.plus .badge{
+  display:inline-block;background:var(--dorado);color:var(--navy);
+  font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:7px 16px;border-radius:999px;margin-bottom:22px;
+}
+.plus h2{color:#fff}
+.plus p.lead{max-width:560px;margin:16px auto 8px;font-size:17px;color:#c9d6ef}
+.plus .price{
+  font-family:'Roboto Mono',monospace;font-size:15px;letter-spacing:1px;
+  color:var(--claro);margin-bottom:40px;
+}
+.plus .perks{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:44px;
+}
+@media(max-width:860px){.plus .perks{grid-template-columns:repeat(2,1fr)}}
+.perk{
+  background:rgba(255,255,255,.07);border:1px solid rgba(199,205,214,.22);
+  border-radius:var(--radius);padding:24px 18px;
+}
+.perk .em{font-size:26px;margin-bottom:10px}
+.perk h3{color:#fff;font-size:15.5px;font-weight:600;margin-bottom:5px}
+.perk p{font-size:13px;color:#b9c8e6}
+
+/* ---------- CTA descarga ---------- */
+.download .box{
+  max-width:860px;margin:0 auto;text-align:center;padding:0 24px;
+}
+.download .isotipo{
+  width:92px;height:92px;border-radius:24px;margin:0 auto 26px;
+  box-shadow:0 14px 34px rgba(10,42,107,.25);
+}
+.download p.sub{max-width:520px;margin:16px auto 32px;font-size:17px}
+.download .ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.download .note{margin-top:20px;font-size:14px}
+
+/* ---------- Footer (Navy) ---------- */
+.site-footer{background:var(--navy);color:#aebad1;padding:56px 0 34px}
+.site-footer .top{
+  max-width:1100px;margin:0 auto;padding:0 24px 34px;
+  display:flex;flex-wrap:wrap;gap:34px;align-items:center;justify-content:space-between;
+}
+.site-footer .brand img{height:54px;width:auto;margin-bottom:8px}
+.site-footer .brand p{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#7f8dab}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:22px;font-size:14px}
+.site-footer nav a{color:#c9d3e6}
+.site-footer nav a:hover{color:#fff}
+.site-footer .bottom{
+  max-width:1100px;margin:0 auto;padding:26px 24px 0;
+  border-top:1px solid rgba(199,205,214,.18);
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+  font-size:13px;color:#8493b0;
+}
+
+/* ---------- Páginas legales / contenido ---------- */
+.page-main{padding:64px 0 80px}
+.page-main .backlink{font-size:14px;font-weight:500}
+.page-main h1{margin:14px 0 10px;font-size:clamp(30px,4.5vw,44px)}
+.page-main .meta{color:#7f8aa3;font-size:14.5px;margin-bottom:44px}
+.content h2{font-size:23px;margin:44px 0 14px;letter-spacing:-.3px}
+.content h3{font-size:17px;color:var(--navy);margin:22px 0 8px}
+.content p{margin-bottom:14px}
+.content ul,.content ol{padding-left:26px;margin-bottom:16px}
+.content li{margin-bottom:8px}
+.content strong{color:var(--navy)}
+.box{
+  background:var(--arena);border:1px solid #e9e5d8;border-radius:var(--radius);
+  padding:24px 26px;margin:26px 0;
+}
+.box.gold{background:var(--crema);border-left:4px solid var(--dorado)}
+.box p:last-child{margin-bottom:0}
+.divider{border:none;border-top:1px solid #e9e6da;margin:48px 0 26px}
+.fineprint{font-size:13.5px;color:#8493b0;text-align:center}
+
+/* FAQ (soporte) */
+details.faq{
+  background:var(--arena);border:1px solid #e9e5d8;border-radius:var(--radius);
+  padding:22px 24px;margin-bottom:14px;
+}
+details.faq summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;
+  align-items:center;gap:14px;font-weight:600;color:var(--navy);font-size:16.5px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:'+';font-size:24px;color:var(--cielo);font-weight:400;transition:transform .18s ease;
+}
+details.faq[open] summary::after{transform:rotate(45deg)}
+details.faq .answer{margin-top:14px;font-size:15px}
+details.faq .answer p{margin-bottom:8px}
+
+/* Tarjeta de contacto destacada */
+.contact-card{
+  background:var(--crema);border:1px solid #e6dfc5;border-radius:24px;
+  padding:40px 32px;text-align:center;margin-bottom:56px;
+}
+.contact-card h2{font-size:24px;margin-bottom:8px}
+.contact-card p{margin-bottom:22px}
