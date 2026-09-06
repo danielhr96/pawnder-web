@@ -2,8 +2,21 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/support", "destination": "/soporte", "permanent": true },
-    { "source": "/privacidad", "destination": "/privacy", "permanent": true }
+    {
+      "source": "/support",
+      "destination": "/soporte",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terminos",
+      "destination": "/eula",
+      "permanent": true
+    }
   ],
   "headers": [
     {
